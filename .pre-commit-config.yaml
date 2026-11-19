@@ -9,6 +9,8 @@ repos:
       - id: pretty-format-json
         args:
           - --autofix
+        # npm writes package-lock.json and would undo the sorted keys
+        exclude: ^package-lock\.json$
       - id: trailing-whitespace
       - id: check-symlinks
       - id: end-of-file-fixer
