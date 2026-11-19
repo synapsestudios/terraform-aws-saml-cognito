@@ -55,7 +55,8 @@ resource "aws_cognito_user_pool_client" "saml" {
 }
 
 module "auth_domain_certificate" {
-  source = "trussworks/acm-cert/aws"
+  source  = "trussworks/acm-cert/aws"
+  version = "~> 7.0"
 
   domain_name = var.dns_name
   zone_id     = data.aws_route53_zone.selected.id
