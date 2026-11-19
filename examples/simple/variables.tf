@@ -1,3 +1,4 @@
 variable "test_name" {
-  type = string
+  description = "Name prefix for the example's resources and DNS records."
+  type        = string
 }
